@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+    <form method="post" class="form">
+        {% csrf_token %}
+        <p>¿Deseas eliminar la categoría <b>{{object}}</b>?</p>
+        <input type="submit" value="Eliminar" class="btn btn-danger">
+        <a class="btn btn-secondary" href="{% url 'cliente_lista' %}">Regresar</a>
+    </form>
+{% endblock contenido %}
