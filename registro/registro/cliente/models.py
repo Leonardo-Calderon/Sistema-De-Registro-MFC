@@ -13,9 +13,9 @@ TIPOS = [
 ]
 
 class DatosPersonales(models.Model):
-    numero = models.PhoneNumberField('teléfono', max_length=10)
-    nombre = models.CharField(_("Nombre completo"), max_length=100)
-    num_serie = models.ForeignKey("cliente.Dispositivo", verbose_name=_("Número de serie"), on_delete=models.CASCADE)
+    numero = models.IntegerField('Número')
+    nombre = models.CharField("Nombre completo", max_length=100)
+    num_serie = models.ForeignKey("cliente.Dispositivo", verbose_name="Número de serie", on_delete=models.CASCADE)
 
     def __str__(self):
         return self.numero
@@ -25,10 +25,10 @@ class Dispositivo(models.Model):
     marca = models.CharField(max_length=50)
     modelo = models.CharField(max_length=100)
     num_serie = models.CharField(max_length=100)
-    accesorios = models.CharField(_("Accesorios"), max_length=200)
-    contra = models.CharField(_("Contraseña"), max_length=100)
-    falla = models.CharField(_("Fallas"), max_length=100)
-    extras = models.CharField(_("Extras"), max_length=100)
+    accesorios = models.CharField("Accesorios", max_length=200)
+    contra = models.CharField("Contraseña", max_length=100)
+    falla = models.CharField("Fallas", max_length=100)
+    extras = models.CharField("Extras", max_length=100)
 
     def __str__(self):
         return self.num_serie

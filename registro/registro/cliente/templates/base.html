@@ -73,11 +73,6 @@
       <!-- Messages Dropdown Menu -->
       
       <li class="nav-item dropdown">
-        <a class="nav-link"  href="{% url 'venta' %}">
-          <i class="fas fa-cart-arrow-down"></i>
-        </a>
-      </li>  
-      <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-comments"></i>
           <span class="badge badge-danger navbar-badge">3</span>
@@ -224,19 +219,19 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Artículos
+                Cliente
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{% url 'articulos_lista' %}" class="nav-link">
+                <a href="{% url 'cliente_lista' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Lista</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'nuevo_articulo' %}" class="nav-link">
+                <a href="{% url 'nuevo_cliente' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Nuevo</p>
                 </a>
@@ -248,19 +243,19 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Categorias
+                Dispositivo
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{% url 'categorias_lista' %}" class="nav-link">
+                <a href="{% url 'dispositivo_lista' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Lista</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'nueva_categoria' %}" class="nav-link">
+                <a href="{% url 'nuevo_dispositivo' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Nuevo</p>
                 </a>
